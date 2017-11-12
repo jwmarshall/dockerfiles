@@ -1,6 +1,7 @@
 pipeline:
   build:
     image: jwmarshall/drone-make
-    recursive: false
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - make all
