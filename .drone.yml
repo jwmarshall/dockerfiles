@@ -1,5 +1,6 @@
 pipeline:
   build:
     image: jwmarshall/drone-make
+    recursive: false
     commands:
       - make all
