@@ -1,0 +1,5 @@
+pipeline:
+  build:
+    image: jwmarshall/drone-make
+    commands:
+      - make all
