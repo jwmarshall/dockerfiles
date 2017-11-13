@@ -8,8 +8,9 @@ pipeline:
 
   push:
     image: jwmarshall/drone-make
-    environment:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
+      - export
+      - docker login
       - make all PUSH=true
