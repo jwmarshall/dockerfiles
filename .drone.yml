@@ -8,6 +8,6 @@ pipeline:
   push:
     image: jwmarshall/drone-make
     volumes:
-      - /var/run/docker.dock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - make all PUSH=true
