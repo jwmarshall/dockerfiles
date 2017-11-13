@@ -5,7 +5,7 @@ pipeline:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - make all
-  push:
+  publish:
     image: jwmarshall/drone-make
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
