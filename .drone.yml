@@ -9,11 +9,7 @@ pipeline:
   push:
     image: jwmarshall/drone-make
     environment:
-      - DOCKER_USERNAME=$$DOCKER_USERNAME
-      - DOCKER_PASSWORD=$$DOCKER_PASSWORD
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
-      - export
-      - docker login --username "${DOCKER_USERNAME}" --password "${DOCKER_PASSWORD}"
       - make all PUSH=true
