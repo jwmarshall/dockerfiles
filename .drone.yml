@@ -8,7 +8,8 @@ pipeline:
 
   push:
     image: jwmarshall/drone-make
-    tty: true
+    docker:
+      tty: true
     secrets:
       - docker_username
       - docker_password
