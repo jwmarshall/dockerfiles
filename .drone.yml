@@ -8,6 +8,9 @@ pipeline:
 
   push:
     image: jwmarshall/drone-make
+    secrets:
+      - docker_username
+      - docker_password
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
