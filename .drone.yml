@@ -12,5 +12,5 @@ pipeline:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - export
-      - docker login --username "${DOCKER_USERNAME}" --password "${DOCKER_PASSWORD}"
+      - docker login --username "${docker_username}" --password "${docker_password}"
       - make all PUSH=true
